@@ -10,6 +10,7 @@ class Obra {
 	var property implementosDeAguaColocados = 0
 	var property implementosDeGasColocados = 0
 	var property cablesElectricosColocados = 0
+	var obrerosDisponibles = []
 	
 	method habitaciones()	
 	method pisos()
@@ -21,14 +22,22 @@ class Casa inherits Obra {
 	var property habitaciones = 3
 	var property banios = 1
 	
-	override method habitaciones() = habitaciones
-	override method banios() = banios
+	override method habitaciones() {
+		return habitaciones
+	}
+	override method banios() {
+		return banios
+	}
 	
-	override method pisos() = 1
+	override method pisos() {
+		return 1
+	}
 }
 
 class Edificio inherits Obra {
 	var property pisos = 4
-	override method pisos() = pisos
+	override method pisos() {
+		return pisos 
+	}
 }
 
